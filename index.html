@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <title>BMI calulator</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    #one {
+      display: none;
+    }
+
+    input[type='submit'] {
+      margin-top: 1rem;
+    }
+
+    #box {
+      width: 60%;
+      margin: 0 auto;
+      border: 2px solid #f1e5e5;
+      margin-top: 1rem;
+      border-radius: 30px;
+    }
+
+    #title {
+      background: rgb(71, 195, 245);
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      text-align: center;
+      padding: 0.3rem;
+      color: #f4f4f4;
+    }
+
+    #bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h4 {
+      padding: 0;
+      margin: 0;
+    }
+
+    #output {
+      height: 10rem;
+      margin-top: 7rem;
+      width: 80%;
+      font-size: 4rem;
+    }
+
+    #loading {
+      display: none;
+      width: 60%;
+      margin: auto;
+      text-align: center;
+    }
+
+    #state {
+      font-size: 2rem;
+    }
+    input {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <input class="button-primary" type="submit" value="See Refernce " />
+      <div id="box">
+        <div id="title">
+          <h4>Body mass index (BMI)</h4>
+          <p>A measure of body fat in adults</p>
+        </div>
+        <div id="bottom">
+          <div id="left">
+            <label>Weight (lb):</label>
+            <input
+              class="u-full-width"
+              type="number"
+              placeholder="Weight Lb"
+              id="weight"
+              value="0"
+            />
+            <label>Height (Feet):</label>
+            <input
+              class="u-full-width"
+              type="number"
+              placeholder="Height in ft"
+              id="height"
+              value="0"
+            />
+            <label>Inches:</label>
+            <input
+              class="u-full-width"
+              type="number"
+              placeholder="Inches"
+              id="inches"
+              value="0"
+            />
+            <input
+              class="button-primary u-full-width"
+              id="submit"
+              type="submit"
+              value="submit "
+            />
+          </div>
+          <div id="right">
+            <input type="text" id="output" disabled />
+            <p id="state"></p>
+          </div>
+        </div>
+      </div>
+      <div id="loading">
+        <img src="./images/loading.gif" alt="" />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
